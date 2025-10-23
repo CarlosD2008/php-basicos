@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "";
+$password = "Senai@118";
 $dbname = "exercicio";
 
 try {
@@ -16,7 +16,7 @@ try {
     echo "Conexão realizada com sucesso!";
 } catch (Exception $e) {
     // Exibe uma mensagem de erro amigável
-    echo "Erro ao conectar ao banco de dados: " . $e->getMessage();
+    echo "Erro ao conectar ao Banco de dados: " . $conn->connect_error;
 }
 ?>
 

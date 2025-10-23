@@ -2,17 +2,17 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Cadastro de Clientes</title>
+    <title>Cadastro de Produtos</title>
 </head>
 <body>
     <form method="post" action="">
-        <label for="nome">Nome:</label>
-        <input type="text" name="nome" required><br>
+        <label for="nome">Nome do produto:</label>
+        <input type="text" name="nome" required><br><br>
 
-        <label for="email">Email:</label>
-        <input type="email" name="email" required><br>
+        <label for="preco">Preço:</label>
+        <input type="number" name="preco" required><br><br>
 
-        <button type="submit">Cadastrar</button>
+        <button type="submit">Cadastrar produto</button><br>
     </form>
 
 <?php
@@ -20,7 +20,7 @@
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Recebe os valores enviados pelo formulário
     $nome = $_POST['nome'];
-    $email = $_POST['email'];
+    $preco = $_POST['preco'];
 
     // Conecta ao banco de dados
     $servername = "localhost";
@@ -36,12 +36,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     // Insere o registro no banco de dados
-    $sql = "INSERT INTO clientes (nome, email) VALUES ('$nome', '$email')";
+    $sql = "INSERT INTO produtos (nome, preco) VALUES ('$nome', '$preco')";
 
     if ($conn->query($sql) === TRUE) {
-        echo "<p style='color: purple;'>Boa!</p>";
-    } else { 
-        echo "<p style='color: red;'>Negado!: " . $conn->error . "</p>";
+        echo "<p style='color: blue;'>Produto cadrastado com sucesso!</p>";
+    } else {
+        echo "<p style='color: red;'>Erro: O preço deve ser um número positivo." . $conn->error . "</p>";
     }
 
     // Fecha a conexão
@@ -50,4 +50,3 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 ?>
 </body>
 </html>
-
