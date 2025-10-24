@@ -1,8 +1,4 @@
-<!-- Passar id via URL -->
-<!-- http://localhost/php-basicos/12_atualizar.php?id=1-->
-<!-- Passar id via URL -->
-<!-- http://localhost/php-basico-out-2024/12_atualizar.php?id=1-->
-
+<!-- http://localhost/php-basicos/12_atualizar.php 
 <?php
 // Conecta ao banco de dados
 $servername = "localhost";
@@ -71,8 +67,3 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </form>
 </body>
 </html>
-
-
-
-
-

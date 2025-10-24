@@ -10,7 +10,8 @@
         <input type="text" name="nome" required><br><br>
 
         <label for="preco">Preço:</label>
-        <input type="number" name="preco" required><br><br>
+        <input type="number" name="preco" step="0.01"
+         ><br><br>
 
         <button type="submit">Cadastrar produto</button><br>
     </form>

@@ -8,7 +8,7 @@
 
  <form method="post" action="" enctype="multipart/form-data">
           <label for="imagem">Selecione uma imagem:</label>
-          <input type="file" name="imagem" accept="image/*" required><br>
+          <input type="file" name="imagem" accept="image/*" required><br><br>
           <button type="submit">Upload</button>
       </form>
 
