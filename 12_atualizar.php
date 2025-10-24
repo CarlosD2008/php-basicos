@@ -1,5 +1,6 @@
-<!-- http://localhost/php-basicos/12_atualizar.php 
-<?php
+<!-- Passar id via URL -->
+<!-- http://localhost/php-basico/12_atualizar.php?id=1-->
+ <?php
 // Conecta ao banco de dados
 $servername = "localhost";
 $username = "root";
