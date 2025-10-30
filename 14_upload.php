@@ -27,10 +27,10 @@
 
       // Move o arquivo enviado para o diretório de destino
       if (move_uploaded_file($_FILES['imagem']['tmp_name'], $caminho_completo)) {
-          echo "<p>Upload realizado com sucesso!</p>";
+          echo "<p style='color: blue'> Upload realizado com sucesso!</p>";
           echo "<img src='$caminho_completo' alt='Imagem enviada' style='max-width: 300px;'>";
       } else {
-         echo "<p>Erro ao fazer upload do arquivo.</p>";
+         echo "<p style='color: red' >Erro ao fazer upload do arquivo.</p>";
      }
  }
 ?>
